@@ -104,13 +104,13 @@ setInterval(function(){
 
 function get_result(){
     let res_cookie = document.cookie.split('; ')
-    for (let i; i < cookie.length; i++)
+    for (let i; i < cookie.length; i++){
     let new_cookie = cookies[i].split('=')
-    if (new_cookie[0] = 'pixel-result')
-    return new_cookie[1]
+    if (new_cookie[0] = 'pixel-result'){
+    return new_cookie[1]}
 }
-
-
+    return '0' * 450
+}
 
 
 
