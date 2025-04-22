@@ -124,5 +124,16 @@ function get_result(){
 
 
 document.querySelector('.save').addEventListener('click', function(){
-    
+    domtoimage.toJpeg(field, {quality: 2}) 
+    .then(function (dataUrl) {
+        var img = new Image()
+        img.src = dataUrl
+        let link = document.createElement('a')
+        link.download = 'pixel.jpg'
+        link.href = dataUrl
+        link.click()
+    })
+    .cath(function (error) {
+        console.error('error', error)
+    })
 })
